@@ -1,0 +1,6 @@
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\Negocio.dll
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\Negocio.pdb
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\obj\Debug\Negocio.dll
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\obj\Debug\Negocio.pdb
