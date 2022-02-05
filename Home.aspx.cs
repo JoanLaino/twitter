@@ -26,19 +26,39 @@ namespace Twitter
         {            
             if (txtTwit.Text == "")
             {
-                Response.Redirect("https://www.google.com/");
+                ClientScript.RegisterStartupScript(this.GetType(), "alert",
+                "alert('Debe escribir un mensaje para twitear.')", true);
             }
             else
             {
+                AccesoDatos datos = new AccesoDatos();
                 try
-                {
-                    //AccesoDatos datos = new AccesoDatos();
+                {  
+                    string twit = txtTwit.Text;
+                    string spEnviarTwit = "exec sp_enviar_twit '" + twit + "'";
 
-                    //string twit = txtTwit.Text;                
+                    try
+                    {
+                        datos.IUD(spEnviarTwit);
+
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert",
+                        "alert('¡Twit envíado correctamente!')", true);
+
+                        BindData();                        
+                    }
+                    catch 
+                    {
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert",
+                        "alert('El twit no se a podido guardar correctamente..')", true);
+                    }
                 }
                 catch (Exception ex)
                 {
                     throw ex;
+                }
+                finally
+                {
+                    datos.CerrarConexion();
                 }
             }
         }       
