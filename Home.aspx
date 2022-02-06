@@ -6,4 +6,14 @@
 
     <asp:Button ID="btnTwit" runat="server" Text="Twittear" class="btn-twittear" OnClick="btnTwit_Click" />
 
+    <%--Hacer repeater que muestre todos los twits--%>
+    <div>
+        <%foreach (Dominio.Twit item in lista)
+            {%>
+        <div class="stl-twit">
+            <h5><% = item.Contenido %></h5>
+        </div>
+        <%} %>
+    </div>
+
 </asp:Content>

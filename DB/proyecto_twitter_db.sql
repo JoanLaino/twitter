@@ -19,3 +19,5 @@ begin
 	values(@Contenido)
 end
 go
+
+select Contenido from twit order by ID desc

@@ -5,21 +5,36 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Negocio;
+using Dominio;
 
 namespace Twitter
 {
     public partial class Home : System.Web.UI.Page
     {
+        public List<Twit> lista;
         protected void Page_Load(object sender, EventArgs e)
         {
+            TwitDB twitDB = new TwitDB();           
+
             if (!IsPostBack)
             {
                 BindData();
             }
+
+            try
+            {
+                lista = twitDB.Listar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
         public void BindData()
         {
             txtTwit.Text = "";
+
         }
 
         protected void btnTwit_Click(object sender, EventArgs e)
@@ -39,18 +54,17 @@ namespace Twitter
 
                     try
                     {
-                        datos.IUD(spEnviarTwit);
+                        datos.IUD(spEnviarTwit);                        
 
-                        ClientScript.RegisterStartupScript(this.GetType(), "alert",
-                        "alert('¡Twit envíado correctamente!')", true);
+                        BindData();
 
-                        BindData();                        
+                        Response.Redirect("Home.aspx");                       
                     }
                     catch 
                     {
                         ClientScript.RegisterStartupScript(this.GetType(), "alert",
                         "alert('El twit no se a podido guardar correctamente..')", true);
-                    }
+                    }                    
                 }
                 catch (Exception ex)
                 {
