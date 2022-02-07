@@ -15,12 +15,14 @@
             <div class="stl-interacciones">
                 <div>
                     <center>
-                        <i class="far fa-heart stl-hearth"></i>
+                        <i class="far fa-heart stl-hearth"></i>                        
                     </center>
                 </div>
                 <div>
                     <center>
                         <i class="far fa-trash-alt stl-trash"></i>
+                        <asp:Button ID="Button1" runat="server" Text="Button" Visible="false" />
+                        <%--Hacer con js que al clickear el corazon se haga click en el asp:button--%>
                     </center>
                 </div>
             </div>
