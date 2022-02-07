@@ -11,7 +11,19 @@
         <%foreach (Dominio.Twit item in lista)
             {%>
         <div class="stl-twit">
-            <h5><% = item.Contenido %></h5>
+            <p class="stl-contenido"><% = item.Contenido %></p>
+            <div class="stl-interacciones">
+                <div>
+                    <center>
+                        <i class="far fa-heart stl-hearth"></i>
+                    </center>
+                </div>
+                <div>
+                    <center>
+                        <i class="far fa-trash-alt stl-trash"></i>
+                    </center>
+                </div>
+            </div>
         </div>
         <%} %>
     </div>
