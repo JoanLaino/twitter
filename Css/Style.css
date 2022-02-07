@@ -68,21 +68,20 @@
 }
 
 .stl-trash {
-    color: gray;
+    width: 20px;
 }
 
 .stl-trash:hover {
     color: #000000;
-    text-shadow: 2px 2px 2px grey;
-    cursor: pointer;
+    filter: drop-shadow(3px 3px 3px grey);
 }
 
 .stl-hearth {
-    color: gray;
+    width: 20px;
 }
 
 .stl-hearth:hover {
-    color: red;
-    text-shadow: 2px 2px 2px #f39f9f;
-    cursor: pointer;
+    color: red;    
+    filter: drop-shadow(3px 3px 3px #f39f9f);    
 }
+

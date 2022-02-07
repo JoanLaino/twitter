@@ -15,14 +15,13 @@
             <div class="stl-interacciones">
                 <div>
                     <center>
-                        <i class="far fa-heart stl-hearth"></i>                        
+                        <%--Mejorar imagen de corazon.--%>
+                        <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="Img/corazon.png" CssClass="stl-hearth"/>                     
                     </center>
                 </div>
                 <div>
-                    <center>
-                        <i class="far fa-trash-alt stl-trash"></i>
-                        <asp:Button ID="Button1" runat="server" Text="Button" Visible="false" />
-                        <%--Hacer con js que al clickear el corazon se haga click en el asp:button--%>
+                    <center>                        
+                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="Img/trash.png" CssClass="stl-trash" />
                     </center>
                 </div>
             </div>
