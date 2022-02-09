@@ -29,7 +29,6 @@ namespace Twitter
             {
                 throw ex;
             }
-
         }
         public void BindData()
         {
@@ -75,6 +74,12 @@ namespace Twitter
                     datos.CerrarConexion();
                 }
             }
-        }       
+        }
+
+        protected void btnTrash_Click(object sender, ImageClickEventArgs e)
+        {
+            //Arreglar que aparezca bien el popup.
+            confirmarTrash.CssClass = "trash-visible";
+        }
     }
 }

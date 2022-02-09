@@ -42,6 +42,7 @@
 }
 
 .text-twit {
+    
 }
 
 .txt-vacio {
@@ -77,11 +78,74 @@
 }
 
 .stl-hearth {
-    width: 20px;
+    width: 18px;
 }
 
 .stl-hearth:hover {
-    color: red;    
-    filter: drop-shadow(3px 3px 3px #f39f9f);    
+    color: red;        
+    filter: drop-shadow(0.5px 0.5px 0 red);    
 }
 
+.popup-confirmar-trash {
+    width: 50%;
+    background-color: #335BFF;
+    padding: 2%;
+    border: 1px solid #6080F7;
+    border-radius: 15px;
+    box-shadow: 7px 7px 5px 0px #0A3CF7;
+    margin-bottom: -200px;
+    margin-top: 15%;
+    position: relative;
+    display: none;
+}
+
+.txt-trash {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: system-ui;
+}
+
+.btn-si-trash {
+    width: 50%;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: #62C456;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: system-ui;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 0px 10px 0px gray;
+}
+
+.btn-si-trash:hover {
+    color: #62C456;
+    background-color: #FFFFFF;
+    border: 2px solid #62C456;
+    box-shadow: 0px 0px 10px 0px #FFFFFF;
+    transition-delay: 0.1s;
+}
+
+.btn-no-trash {
+    width: 50%;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: #DD4545;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: system-ui;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 0px 10px 0px gray;
+}
+
+.btn-no-trash:hover {
+    color: #DD4545;
+    background-color: #FFFFFF;
+    border: 2px solid #DD4545;
+    box-shadow: 0px 0px 10px 0px #FFFFFF;
+    transition-delay: 0.1s;
+}
+
+.trash-visible {
+    display: initial !important;
+}

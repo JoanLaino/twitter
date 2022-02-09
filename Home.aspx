@@ -6,7 +6,25 @@
 
     <asp:Button ID="btnTwit" runat="server" Text="Twittear" class="btn-twittear" OnClick="btnTwit_Click" />
 
-    <%--Hacer repeater que muestre todos los twits--%>
+    <%--Arreglar que aparezca bien el popup.--%>
+    <asp:Panel ID="confirmarTrash" class="popup-confirmar-trash" runat="server">
+        <center>
+        <p class="txt-trash">¿Deseas eliminar este twit?</p>    
+        </center>
+        <div class="stl-interacciones">
+            <div>
+                <center>
+                <asp:Button ID="btnSiTrash" runat="server" Text="Si" class="btn-si-trash" />
+                </center>
+            </div>
+            <div>
+                <center>
+                <asp:Button ID="btnNoTrash" runat="server" Text="No" class="btn-no-trash" />
+                </center>
+            </div>
+        </div>  
+    </asp:Panel>   
+  
     <div>
         <%foreach (Dominio.Twit item in lista)
             {%>
@@ -16,17 +34,18 @@
                 <div>
                     <center>
                         <%--Mejorar imagen de corazon.--%>
-                        <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="Img/corazon.png" CssClass="stl-hearth"/>                     
+                        <asp:ImageButton ID="btnHearth" runat="server" ImageUrl="Img/corazon.png" CssClass="stl-hearth" />
                     </center>
                 </div>
                 <div>
-                    <center>                        
-                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="Img/trash.png" CssClass="stl-trash" />
+                    <center>
+                        <asp:ImageButton ID="btnTrash" runat="server" ImageUrl="Img/trash.png" CssClass="stl-trash" OnClick="btnTrash_Click" />
                     </center>
                 </div>
             </div>
         </div>
         <%} %>
     </div>
+    
 
 </asp:Content>
