@@ -18,7 +18,7 @@ namespace Negocio
 
             try
             {
-                datos.SetearConsulta("select Contenido from twit order by ID desc");
+                datos.SetearConsulta("select Contenido from twit where Estado = 1 order by ID desc");
                 datos.EjecutarLectura();
 
                 while(datos.Lector.Read())

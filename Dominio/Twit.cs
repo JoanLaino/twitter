@@ -10,5 +10,6 @@ namespace Dominio
     {
         public int ID { get; set; }
         public string Contenido { get; set; }
+        public bool Estado { get; set; }
     }
 }

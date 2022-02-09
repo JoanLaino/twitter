@@ -79,7 +79,17 @@ namespace Twitter
         protected void btnTrash_Click(object sender, ImageClickEventArgs e)
         {
             //Arreglar que aparezca bien el popup.
-            confirmarTrash.CssClass = "trash-visible";
+            popupTrash.Attributes["class"] = "trash-visible";
+        }
+
+        protected void btnNoTrash_Click(object sender, EventArgs e)
+        {
+            popupTrash.Attributes["class"] = "popup-confirmar-trash";
+        }
+
+        protected void btnSiTrash_Click(object sender, EventArgs e)
+        {
+            //Seleccionar ID de la lista para porder darle baja lógica al twit.
         }
     }
 }

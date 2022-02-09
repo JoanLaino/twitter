@@ -7,23 +7,24 @@
     <asp:Button ID="btnTwit" runat="server" Text="Twittear" class="btn-twittear" OnClick="btnTwit_Click" />
 
     <%--Arreglar que aparezca bien el popup.--%>
-    <asp:Panel ID="confirmarTrash" class="popup-confirmar-trash" runat="server">
+    <div class="popup-confirmar-trash" id="popupTrash" runat="server">
         <center>
-        <p class="txt-trash">¿Deseas eliminar este twit?</p>    
+            <p class="txt-trash">¿Deseas eliminar este twit?</p>
         </center>
         <div class="stl-interacciones">
             <div>
                 <center>
-                <asp:Button ID="btnSiTrash" runat="server" Text="Si" class="btn-si-trash" />
+                    <asp:Button ID="btnSiTrash" runat="server" Text="Si" class="btn-si-trash" OnClick="btnSiTrash_Click" />
                 </center>
             </div>
             <div>
                 <center>
-                <asp:Button ID="btnNoTrash" runat="server" Text="No" class="btn-no-trash" />
+                    <asp:Button ID="btnNoTrash" runat="server" Text="No" class="btn-no-trash" OnClick="btnNoTrash_Click" />
                 </center>
             </div>
-        </div>  
-    </asp:Panel>   
+        </div>
+    </div>
+     
   
     <div>
         <%foreach (Dominio.Twit item in lista)
@@ -47,5 +48,12 @@
         <%} %>
     </div>
     
+   <%-- <script type="text/javascript">
+        function mostrarPopup() {
+
+            document.getElementById("popupTrash").className += "trash-visible";
+        }
+        
+    </script--%>
 
 </asp:Content>

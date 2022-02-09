@@ -33,13 +33,13 @@ namespace Twitter
         protected global::System.Web.UI.WebControls.Button btnTwit;
 
         /// <summary>
-        /// Control confirmarTrash.
+        /// Control popupTrash.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel confirmarTrash;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl popupTrash;
 
         /// <summary>
         /// Control btnSiTrash.

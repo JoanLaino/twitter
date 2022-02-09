@@ -86,17 +86,20 @@
     filter: drop-shadow(0.5px 0.5px 0 red);    
 }
 
-.popup-confirmar-trash {
+.popup-confirmar-trash {    
+    display: none;
+}
+
+.trash-visible {
     width: 50%;
     background-color: #335BFF;
     padding: 2%;
     border: 1px solid #6080F7;
     border-radius: 15px;
     box-shadow: 7px 7px 5px 0px #0A3CF7;
-    margin-bottom: -200px;
+    margin-bottom: -27.4%;
     margin-top: 15%;
     position: relative;
-    display: none;
 }
 
 .txt-trash {
@@ -146,6 +149,3 @@
     transition-delay: 0.1s;
 }
 
-.trash-visible {
-    display: initial !important;
-}
