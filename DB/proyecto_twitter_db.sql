@@ -6,7 +6,8 @@ go
 
 create table twit (
 	ID bigint not null primary key identity (1, 1),
-	Contenido varchar(200) not null
+	Contenido varchar(200) not null,
+	Estado bit not null default (1)
 )
 go
 
@@ -20,4 +21,8 @@ begin
 end
 go
 
-select Contenido from twit order by ID desc
+create trigger tr_eliminar_twit (
+)
+
+select Contenido, ID from twit t where Estado = 1 order by ID desc
+go

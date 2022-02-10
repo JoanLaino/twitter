@@ -18,13 +18,14 @@ namespace Negocio
 
             try
             {
-                datos.SetearConsulta("select Contenido from twit where Estado = 1 order by ID desc");
+                datos.SetearConsulta("select Contenido, ID from twit t where Estado = 1 order by ID desc");
                 datos.EjecutarLectura();
 
                 while(datos.Lector.Read())
                 {
                     Twit aux = new Twit();
                     aux.Contenido = (String)datos.Lector["Contenido"];
+                    aux.ID = (long)datos.Lector["ID"];
                     lista.Add(aux);
                 }
 

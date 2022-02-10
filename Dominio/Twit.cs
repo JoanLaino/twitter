@@ -8,7 +8,7 @@ namespace Dominio
 {
     public class Twit
     {
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string Contenido { get; set; }
         public bool Estado { get; set; }
     }

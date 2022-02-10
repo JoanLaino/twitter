@@ -30,12 +30,13 @@
         <%foreach (Dominio.Twit item in lista)
             {%>
         <div class="stl-twit">
+            <asp:Label ID="lblID" runat="server" Text='<%#Eval("ID") %>' />
             <p class="stl-contenido"><% = item.Contenido %></p>
             <div class="stl-interacciones">
                 <div>
                     <center>
                         <%--Mejorar imagen de corazon.--%>
-                        <asp:ImageButton ID="btnHearth" runat="server" ImageUrl="Img/corazon.png" CssClass="stl-hearth" />
+                        <asp:ImageButton ID="btnHearth" runat="server" ImageUrl="Img/corazon.png" CssClass="stl-hearth" OnClick="btnHearth_Click" />
                     </center>
                 </div>
                 <div>
@@ -44,16 +45,9 @@
                     </center>
                 </div>
             </div>
-        </div>
+        </div>        
         <%} %>
-    </div>
-    
-   <%-- <script type="text/javascript">
-        function mostrarPopup() {
-
-            document.getElementById("popupTrash").className += "trash-visible";
-        }
-        
-    </script--%>
+    </div>   
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 
 </asp:Content>

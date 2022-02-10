@@ -88,8 +88,17 @@ namespace Twitter
         }
 
         protected void btnSiTrash_Click(object sender, EventArgs e)
+        {           
+            //Twit seleccionado = lista.Find(x => x.ID == id);
+
+            //string IDFinal = seleccionado.ID.ToString();
+            //Seleccionar ID de la lista para porder darle baja lógica al twit.            
+        }
+
+        protected void btnHearth_Click(object sender, ImageClickEventArgs e)
         {
-            //Seleccionar ID de la lista para porder darle baja lógica al twit.
+            
+            //Recibir el ID y cambiar MeGusta a true.
         }
     }
 }
