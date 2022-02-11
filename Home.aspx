@@ -34,8 +34,7 @@
             <p class="stl-contenido"><% = item.Contenido %></p>
             <div class="stl-interacciones">
                 <div>
-                    <center>
-                        <%--Mejorar imagen de corazon.--%>
+                    <center>                       
                         <asp:ImageButton ID="btnHearth" runat="server" ImageUrl="Img/corazon.png" CssClass="stl-hearth" OnClick="btnHearth_Click" />
                     </center>
                 </div>
@@ -48,6 +47,9 @@
         </div>        
         <%} %>
     </div>   
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+    <%--Probar listview para manipular el ID
+    <asp:ListView ID="ListView1" runat="server"></asp:ListView>--%>
+    
 
 </asp:Content>
