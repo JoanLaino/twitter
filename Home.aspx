@@ -48,8 +48,8 @@
         <%} %>
     </div>   
 
-    <%--Probar listview para manipular el ID
-    <asp:ListView ID="ListView1" runat="server"></asp:ListView>--%>
+    
+    <%--<asp:ListView ID="ListView1" runat="server"></asp:ListView>--%>
     
 
 </asp:Content>
