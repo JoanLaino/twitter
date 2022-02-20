@@ -13,5 +13,17 @@ namespace Twitter
         {
 
         }
+
+        public void Logout()
+        {
+            Session.Abandon();
+            Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
+        }
+
+        protected void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Logout();
+            Response.Redirect("Login.aspx", false);
+        }
     }
 }

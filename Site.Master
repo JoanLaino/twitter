@@ -48,6 +48,8 @@
             <div class="stl-principal">
                 <i class="fas fa-home stl-item"></i>
                 <a href="Home.aspx" class="btn-home">Home</a>
+                <br />
+                <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar Sesion" UseSubmitBehavior="False" OnClick="btnCerrarSesion_Click" class="btn btn-outline-danger" />
             </div>
             <div class="stl-secundario">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">                

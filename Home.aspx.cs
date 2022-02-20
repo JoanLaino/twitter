@@ -14,6 +14,12 @@ namespace Twitter
         public List<Twit> lista;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["usuario"] == null)
+            {
+                Session.Add("error", "Debes loguearte para ingresar.");
+                Response.Redirect("Error.aspx", false);
+            }
+
             TwitDB twitDB = new TwitDB();           
 
             if (!IsPostBack)
@@ -23,7 +29,8 @@ namespace Twitter
 
             try
             {
-                lista = twitDB.Listar();
+                int IDUsuario = (int)Session["IDUsuario"];
+                lista = twitDB.Listar(IDUsuario);
             }
             catch (Exception ex)
             {
@@ -49,7 +56,8 @@ namespace Twitter
                 try
                 {  
                     string twit = txtTwit.Text;
-                    string spEnviarTwit = "exec sp_enviar_twit '" + twit + "'";
+                    int IDUsuario = (int)Session["IDUsuario"];
+                    string spEnviarTwit = "exec sp_enviar_twit '" + twit + "', " + IDUsuario;
 
                     try
                     {

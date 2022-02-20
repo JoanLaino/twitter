@@ -59,8 +59,27 @@
 
 .stl-contenido {
     font-size: 15px;
+    font-weight: 300;
+    font-family: system-ui;
+}
+
+.stl-usuario {
+    font-size: 15px;
+    font-weight: 300;
+    font-family: system-ui;
+    color: grey;
+    margin-left: 2px;
+}
+
+.stl-nombre {
+    font-size: 15px;
     font-weight: 500;
     font-family: system-ui;
+}
+
+.stl-nom-user {
+    display: flex;
+    align-items: stretch;
 }
 
 .stl-interacciones {

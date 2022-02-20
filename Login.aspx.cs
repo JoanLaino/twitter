@@ -27,6 +27,7 @@ namespace Twitter
                 if(usuarioDB.Loguear(usuario))
                 {
                     Session.Add("usuario", usuario);
+                    Session.Add("IDUsuario", usuario.ID);
                     Response.Redirect("Home.aspx", false);
                 }
                 else
