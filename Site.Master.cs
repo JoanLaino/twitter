@@ -25,5 +25,10 @@ namespace Twitter
             Logout();
             Response.Redirect("Login.aspx", false);
         }
+
+        protected void btnPerfil_Click(object sender, EventArgs e)
+        {           
+            Response.Redirect("Perfil.aspx");
+        }
     }
 }

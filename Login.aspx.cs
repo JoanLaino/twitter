@@ -28,6 +28,9 @@ namespace Twitter
                 {
                     Session.Add("usuario", usuario);
                     Session.Add("IDUsuario", usuario.ID);
+                    Session.Add("Nombre", usuario.Nombres); //No trae el nombre
+                    Session.Add("Apellildo", usuario.Apellidos); //No trae el apellido
+                    Session.Add("Usuario", usuario.User);
                     Response.Redirect("Home.aspx", false);
                 }
                 else
