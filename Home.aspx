@@ -30,7 +30,6 @@
         <%foreach (Dominio.Twit item in lista)
             {%>
         <div class="stl-twit">
-            <%--<asp:Label ID="lblID" runat="server" Text='<%#Eval("ID") %>' />--%>
             <div class="stl-nom-user">
                 <p class="stl-nombre"><% = item.NombreApellido %></p>
                 <p class="stl-usuario">@<% = item.Usuario %></p>
