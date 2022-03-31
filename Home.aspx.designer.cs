@@ -60,21 +60,12 @@ namespace Twitter
         protected global::System.Web.UI.WebControls.Button btnNoTrash;
 
         /// <summary>
-        /// Control btnHearth.
+        /// Control repetidorTwit.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnHearth;
-
-        /// <summary>
-        /// Control btnTrash.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnTrash;
+        protected global::System.Web.UI.WebControls.Repeater repetidorTwit;
     }
 }

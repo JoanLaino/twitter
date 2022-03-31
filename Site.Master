@@ -10,12 +10,20 @@
 
     <title>Twitter</title>
     <link href="Css/Style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css'>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <!-- Font Awesome -->
     <link href="Css/fontawesome.min.css" rel="stylesheet" />
-
+    <script src="JS/main.js"></script>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
+
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -62,9 +70,23 @@
             </div>
             
         </div>
-
+        <asp:HiddenField ID="hfMessage" runat="server" />
     </form>
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        function ValidationPassword() {
+            const hfMessage = $("[id$=hfMessage]");            
+
+            if (hfMessage.val()) {
+                swal(hfMessage.val());
+                hfMessage.val("");
+            }
+        }
+
+        $(() => {
+            ValidationPassword();
+        })
+    </script>
 </body>
 </html>

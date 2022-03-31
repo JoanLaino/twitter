@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Twitter.AppCode;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,6 +15,7 @@ namespace Twitter
         public List<Twit> lista;
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.SetMessage("Aguante juanma");
             if(Session["usuario"] == null)
             {
                 Session.Add("error", "Debes loguearte para ingresar.");
@@ -31,6 +33,13 @@ namespace Twitter
             {
                 int IDUsuario = (int)Session["IDUsuario"];
                 lista = twitDB.Listar(IDUsuario);
+                //Session.Add("ListaTwit", lista);
+
+                if(lista != null)
+                {
+                    repetidorTwit.DataSource = lista;
+                    repetidorTwit.DataBind();
+                }
             }
             catch (Exception ex)
             {
@@ -86,8 +95,10 @@ namespace Twitter
 
         protected void btnTrash_Click(object sender, ImageClickEventArgs e)
         {
-            //Arreglar que aparezca bien el popup.
-            popupTrash.Attributes["class"] = "trash-visible";
+            //var argument = ((ImageButton)sender).CommandArgument;
+            //Session.Add("IDEliminar", argument);
+            //popupTrash.Attributes["class"] = "trash-visible";      
+            this.SetMessage("Esto todavía no está programado.");
         }
 
         protected void btnNoTrash_Click(object sender, EventArgs e)
@@ -96,17 +107,25 @@ namespace Twitter
         }
 
         protected void btnSiTrash_Click(object sender, EventArgs e)
-        {           
-            //Twit seleccionado = lista.Find(x => x.ID == id);
+        {
+            //var argument = (int)Session["IDEliminar"];
+            //List<Twit> twits = (List<Twit>)Session["ListaTwit"];
+            //Twit elim = twits.Find(x => x.ID == argument);
+            //twits.Remove(elim);
 
-            //string IDFinal = seleccionado.ID.ToString();
-            //Seleccionar ID de la lista para porder darle baja lógica al twit.            
+            //Session.Add("listadoCarrito", twits);
+            //repetidorTwit.DataSource = null;
+            //repetidorTwit.DataSource = twits;
+            //repetidorTwit.DataBind();
+
+            //Response.Redirect("Home.aspx");
         }
 
         protected void btnHearth_Click(object sender, ImageClickEventArgs e)
         {
-            
+
             //Recibir el ID y cambiar MeGusta a true.
+            this.SetMessage("Esto todavía no está programado.");
         }
     }
 }

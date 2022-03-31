@@ -23,9 +23,16 @@ create table twit (
 )
 go
 
+create table Seguidores (
+	ID int not null primary key identity(1, 1),
+	IDUsuarioPrincipal int not null,
+	IDUsuarioSeguido int not null
+)
+go
+
 create procedure sp_enviar_twit (
 	@Contenido varchar(200),
-	@IDUsuario int
+	@IDUsuario int 
 )
 as
 begin
@@ -37,7 +44,18 @@ go
 --create trigger tr_eliminar_twit (
 --)
 
-select T.Contenido as 'Contenido', T.ID as 'ID', U.Nombres + ' ' + U.Apellidos as 'Nombre', U.Usuario as 'Usuario' from Usuarios as U
-inner join twit as T on U.ID = T.IDUsuario
-where Estado = 1 and T.IDUsuario = 2 order by T.ID desc
-go
+insert into Usuarios(Usuario, Nombres, Apellidos, Mail, Pass, TipoUser) values('admin', 'admin', 'admin', 'admin@admin.com', 'admin', 2)
+insert into Usuarios(Usuario, Nombres, Apellidos, Mail, Pass, TipoUser) values('joannn123', 'Joan',	'Laino', 'joanlaino@hotmail.com', 'asdasd', 1)
+
+insert into twit(Contenido, Estado, IDUsuario) values('Que me contas', 1, 1)
+insert into twit(Contenido, Estado, IDUsuario) values('buenas', 1, 1)
+insert into twit(Contenido, Estado, IDUsuario) values('pero', 1, 2)
+insert into twit(Contenido, Estado, IDUsuario) values('perrooo', 1, 1)
+insert into twit(Contenido, Estado, IDUsuario) values('Lindo día', 1, 2)
+
+
+--Pruebas de Querys
+--select T.Contenido as 'Contenido', T.ID as 'ID', U.Nombres + ' ' + U.Apellidos as 'Nombre', U.Usuario as 'Usuario' from Usuarios as U
+--inner join twit as T on U.ID = T.IDUsuario
+--where Estado = 1 and T.IDUsuario = 2 order by T.ID desc
+--go

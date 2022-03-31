@@ -24,9 +24,33 @@
             </div>
         </div>
     </div>
+
+    <asp:Repeater ID="repetidorTwit" runat="server">
+        <ItemTemplate>
+            <div class="stl-twit">
+                <div class="stl-nom-user">
+                    <p class="stl-nombre"><%#Eval("NombreApellido") %></p>
+                    <p class="stl-usuario">@<%#Eval("Usuario")%></p>
+                </div>
+                <p class="stl-contenido"><%#Eval("Contenido") %></p>
+                <div class="stl-interacciones">
+                    <div>
+                        <center>
+                            <asp:ImageButton ID="btnHearth" runat="server" ImageUrl="Img/corazon.png" CssClass="stl-hearth" OnClick="btnHearth_Click" />
+                        </center>
+                    </div>
+                    <div>
+                        <center>
+                            <asp:ImageButton ID="btnTrash" runat="server" ImageUrl="Img/trash.png" CssClass="stl-trash" OnClick="btnTrash_Click"  />
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
      
   
-    <div>
+    <%--<div>
         <%foreach (Dominio.Twit item in lista)
             {%>
         <div class="stl-twit">
@@ -38,21 +62,23 @@
             <div class="stl-interacciones">
                 <div>
                     <center>                       
-                        <asp:ImageButton ID="btnHearth" runat="server" ImageUrl="Img/corazon.png" CssClass="stl-hearth" OnClick="btnHearth_Click" />
+                        
                     </center>
                 </div>
                 <div>
                     <center>
-                        <asp:ImageButton ID="btnTrash" runat="server" ImageUrl="Img/trash.png" CssClass="stl-trash" OnClick="btnTrash_Click" />
+                       
                     </center>
                 </div>
             </div>
         </div>        
         <%} %>
-    </div>   
+    </div>  --%> 
 
     
     <%--<asp:ListView ID="ListView1" runat="server"></asp:ListView>--%>
     
-
+    <script>
+        
+    </script>
 </asp:Content>

@@ -7,3 +7,13 @@ C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\obj\Debug\Negocio.p
 C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\Dominio.dll
 C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\Dominio.pdb
 C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\Negocio.dll.config
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\Dominio.dll.config
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\joanl\OneDrive\Documentos\Proyectos\Twitter\Negocio\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
